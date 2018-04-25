@@ -1,0 +1,7 @@
+把一个文件(例如: readme.txt)添加到Git仓库:
+step 1: git add readme.tx
+step 2: git commit -m "提交说明"
+
+git status: 仓库当前的状态
+git diff: 修改了文件，但没有上传，查看修改的内容。
+
