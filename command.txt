@@ -1,7 +1,22 @@
+git remote: 查看远程仓库
+git remote -v: 查看远程仓库的详细信息
+
 把一个文件(例如: readme.txt)添加到Git仓库:
 step 1: git add readme.tx
 step 2: git commit -m "提交说明"
 
 git status: 仓库当前的状态
-git diff: 修改了文件，但没有上传，查看修改的内容。
+git diff: 修改了文件，但没有上传，查看修改的内容
+git log: 查看修改历史(修改的历史记录)
+git log --pretty=oneline: 查看修改历史，返回: commit id + "提交说明"
+git log --pretty=oneline --abbrev-commit: 查看修改历史，返回: commit id (缩写) + "提交说明"
+
+HEAD: 当前版本
+HEAD^: 上一个版本
+HEAD^^: 上上一个版本
+HEAD~100: 往上第100个版本
+cat readme.txt: 查看文件readme.txt
+git reset --hard HEAD^: 回退到上一个版本
+git reset --hard commit id: 回退到commit id 对应的版本
+git reflog: 查看命令历史（返回每一次命令的内容）
 
