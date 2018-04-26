@@ -13,8 +13,8 @@ git push origin dev: 推送分支dev到远程库
 
 
 把一个文件(例如: readme.txt)添加到Git仓库:
-step 1: git add readme.txt      ------(把要提交的所有修改放到暂存区)         
-step 2: git commit -m "提交说明"      ------(把暂存区的所有修改提交到分支)
+step 1: git add readme.txt		------(把要提交的所有修改放到暂存区)         
+step 2: git commit -m "提交说明"	------(把暂存区的所有修改提交到分支)
 
 
 回退:
@@ -78,11 +78,11 @@ git checkout dev: 切换到分支dev
 
 合并分支(fast forward 模式):
 在dev分支上进行修改，然后合并到master分支:
-step 1: git checkout dev        ------(切换到dev分支)
-step 2: git add readme.txt      ------(在dev分支上进行修改)
+step 1: git checkout dev	------(切换到dev分支)
+step 2: git add readme.txt	------(在dev分支上进行修改)
 step 3: git commit -m "branch test"
-step 4: git checkout master     ------(切换到master分支)
-step 5: git merge dev           ------(将dev分支合并到master分支上)
+step 4: git checkout master	------(切换到master分支)
+step 5: git merge dev		------(将dev分支合并到master分支上)
 
 
 合并分支(普通合并):
@@ -112,18 +112,18 @@ git stash: 把当前工作现场"储藏起来"
 git stash apply: 恢复后不删除stash，用命令git stash drop删除stash
 git stash pop: 恢复的同时删除stash内容
 若dev分支上的工作进行了一半，还不想提交，这时接到一个修复一个代号为101的bug任务时，则修复bug的过程如下:
-step 1: git stash             ------(把当前工作现场"储藏起来")
-step 2: git checkout master   ------(切换到master分支)
-step 3: git checkout -b issue-101      ------(创建并切换到issue-101分支)
-step 4: git add readme.txt     ------(添加修改后的文件)
-step 5: git commit -m "fix bug 101"    ------(提交bug101的修改)
-step 6: git checkout master     ------(切换到master分支)
-step 7: git merge --no-ff -m "merged bug fix 101" issue-101
-step 8: git checkout dev   ------(切换到dev分支)
-step 9: git status  ------(查看仓库当前的状态，由于之前git stash了，这时工作区是干净的)
-step 10: git stash list ------(查看stash内容)
-step 11: git stash pop ------(恢复stash内容)
-step 12: git stash list ------(查看stash内容，由于已经恢复并删除了stash内容，这时看不到任何stash内容了)
+step 1: git stash						------(把当前工作现场"储藏起来")
+step 2: git checkout master					------(切换到master分支)
+step 3: git checkout -b issue-101				------(创建并切换到issue-101分支)
+step 4: git add readme.txt					------(添加修改后的文件)
+step 5: git commit -m "fix bug 101"				------(提交bug101的修改)
+step 6: git checkout master					------(切换到master分支)
+step 7: git merge --no-ff -m "merged bug fix 101" issue-101	------(普通模式合并)
+step 8: git checkout dev					------(切换到dev分支)
+step 9: git status						------(查看仓库当前的状态，由于之前git stash了，这时工作区是干净的)
+step 10: git stash list						------(查看stash内容)
+step 11: git stash pop 						------(恢复stash内容)
+step 12: git stash list 					------(查看stash内容，由于已经恢复并删除了stash内容，这时看不到任何stash内容了)
 
 Remark: 可以多次stash，恢复的时候，先用git stash list 查看，然后恢复指定的stash，用命令: git stash apply stash@{0}
 
@@ -150,13 +150,13 @@ git push origin v1.0: 推送标签v0.1到远程库
 git push origin --tags: 一次性推送全部未推送的标签
 
 删除远程库的标签:
-step 1: git tag -d v0.9 ------(先删除本地)
-step 2: git push origin :refs/tags/v0.9  ------(删除远程库)
+step 1: git tag -d v0.9 			------(先删除本地)
+step 2: git push origin :refs/tags/v0.9  	------(删除远程库)
 
 
-使用Github:
+使用Github:					------(Fork项目到自己的Github中)
 step 1: Fork
-step 2: clone ------(从自己的账号下clone，这样才能传送修改)
+step 2: clone 					------(从自己的账号下clone，这样才能传送修改)
 
 Remark: 若希望他人接受你的修改，则需发起pull request。
 
