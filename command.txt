@@ -10,6 +10,7 @@ git diff HEAD --readme.txt:查看工作区和版本库里最新版本的区别
 git branch: 查看当前分支
 git push origin master: 推送master到远程库
 git push origin dev: 推送分支dev到远程库
+git add .: 添加所有文件
 
 
 把一个文件(例如: readme.txt)添加到Git仓库:
