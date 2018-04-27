@@ -13,6 +13,25 @@ git push origin dev: 推送分支dev到远程库
 git add .: 添加所有文件
 
 
+将远程库的项目克隆到本地:
+git clone url			------这里URL为远程库地址，clone到本地的文件包含了远程库的所有分支
+git branch -r			------查看远程库分支
+git branch -a			------查看所有分支
+
+
+若想clone远程库的某个分支:
+step 1: git clone url				------clone远程库的master分支到本地
+step 2: git branch -r				------查看远程库分支
+返回形式如下:
+origin/HEAD -> origin/master
+origin/annual_planner_kaihua
+origin/annual_planner_local
+origin/huangyan
+origin/master
+step 3: git checkout origin/huangyan		------(将远程库中的分支huangyan克隆到本地)
+
+
+
 把一个文件(例如: readme.txt)添加到Git仓库:
 step 1: git add readme.txt		------(把要提交的所有修改放到暂存区)         
 step 2: git commit -m "提交说明"	------(把暂存区的所有修改提交到分支)
