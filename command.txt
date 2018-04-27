@@ -1,3 +1,17 @@
+管理分支的基本原则:
+No.1: master 分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活;
+No.2: 干活都在dev分支上，也就是说，dev分支是不稳定的。到某个时候，比如1.0版本发布时，
+再把dev分支合并到master上， 发布1.0版本;
+No.3: 你和你的小伙伴们每个人都在dev分支上干活，每个人都有自己的分支，时不时地往dev分支上合并就可以了。
+
+
+使用Github:					------(Fork项目到自己的Github中)
+step 1: Fork
+step 2: clone 					------(从自己的账号下clone，这样才能传送修改)
+Remark: 若希望他人接受你的修改，则需发起pull request。
+
+
+常用命令:
 git remote: 查看远程仓库
 git remote -v: 查看远程仓库的详细信息
 git status: 仓库当前的状态
@@ -117,13 +131,6 @@ step 4: git merge --no-ff -m "merge with no-ff" dev
 git branch -d dev: 删除分支dev
 
 
-管理分支的基本原则:
-No.1: master 分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活;
-No.2: 干活都在dev分支上，也就是说，dev分支是不稳定的。到某个时候，比如1.0版本发布时，
-再把dev分支合并到master上， 发布1.0版本;
-No.3: 你和你的小伙伴们每个人都在dev分支上干活，每个人都有自己的分支，时不时地往dev分支上合并就可以了。
-
-
 bug分支:
 有了bug就需要修复，在git中，由于分支是如此强大，所以，每个bug都可以通过一个新的临时分支来修复，修复后，合并分支，然后将临时分支删除。
 stash功能: 把当前工作现场"储藏起来"，等以后恢复现场时继续工作。
@@ -173,10 +180,4 @@ git push origin --tags: 一次性推送全部未推送的标签
 step 1: git tag -d v0.9 			------(先删除本地)
 step 2: git push origin :refs/tags/v0.9  	------(删除远程库)
 
-
-使用Github:					------(Fork项目到自己的Github中)
-step 1: Fork
-step 2: clone 					------(从自己的账号下clone，这样才能传送修改)
-
-Remark: 若希望他人接受你的修改，则需发起pull request。
 
