@@ -25,6 +25,10 @@ git cherry -v master: 展示当前分支中所有尚未合并到master中的提�
 git log --pretty=oneline --graph --decorate --all: 可视化地查看整个version树
 git log Branch1^Branch2: 查看所有在分支1而不在分支2中的提交
 git branch master_local: 创建一个新的本地git分支
+git fetch origin --prune: 更新远程分支信息
+(用github创建了分支dev，但是在本地用git branch -r查看不到dev分支的信息，这时用上面的命令更新远程分支信息)
+git branch -d dev: 删除本地名为dev的分支
+git push origin --delete dev: 删除远程名为dev的分支
 git remote: 查看远程仓库
 git remote -v: 查看远程仓库的详细信息
 git status: 仓库当前的状态
