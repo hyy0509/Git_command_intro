@@ -21,6 +21,9 @@ info: 信息查看
 git diff --cached: 查看准备用于提交的暂存了的修改的文件
 git diff HEAD: 查看所有暂存与为暂存的文件
 git diff --staged: 查看最新的文件版本与stage中区别
+git cherry -v master: 展示当前分支中所有尚未合并到master中的提交
+git log --pretty=oneline --graph --decorate --all: 可视化地查看整个version树
+git log Branch1^Branch2: 查看所有在分支1而不在分支2中的提交
 git remote: 查看远程仓库
 git remote -v: 查看远程仓库的详细信息
 git status: 仓库当前的状态
