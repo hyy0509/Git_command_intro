@@ -24,6 +24,7 @@ git diff --staged: 查看最新的文件版本与stage中区别
 git cherry -v master: 展示当前分支中所有尚未合并到master中的提交
 git log --pretty=oneline --graph --decorate --all: 可视化地查看整个version树
 git log Branch1^Branch2: 查看所有在分支1而不在分支2中的提交
+git branch master_local: 创建一个新的本地git分支
 git remote: 查看远程仓库
 git remote -v: 查看远程仓库的详细信息
 git status: 仓库当前的状态
