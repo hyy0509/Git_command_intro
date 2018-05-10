@@ -31,6 +31,8 @@ git branch -d dev: 删除本地名为dev的分支
 git push origin --delete dev: 删除远程名为dev的分支
 git checkout -- readme.txt: 回滚未commit的修改（回到上次commit的状态）
 git reset --hard commit_id: 回滚已经commit但未push的修改
+git fetch origin --progress --prune: 拉取git最新信息
+git branch --unset-upstream: 删除本地分支与远程分支之间的关联关系
 git remote: 查看远程仓库
 git remote -v: 查看远程仓库的详细信息
 git status: 仓库当前的状态
