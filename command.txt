@@ -12,10 +12,19 @@ Remark: 若希望他人接受你的修改，则需发起pull request。
 
 
 常用命令:
+git config --list: 列举所有的别名与配置
+git remote set-url origin url: 修改某个远端的地址
+git count-objects --human-readable: 查看当前仓库中的所有未打包的objects和磁盘占用
+git ls-files -t: 展示所有未被追踪的文件
+git ls-files --others: 展示所有未被追踪的分支
+info: 信息查看
+git diff --cached: 查看准备用于提交的暂存了的修改的文件
+git diff HEAD: 查看所有暂存与为暂存的文件
+git diff --staged: 查看最新的文件版本与stage中区别
 git remote: 查看远程仓库
 git remote -v: 查看远程仓库的详细信息
 git status: 仓库当前的状态
-git diff: 修改了文件，但没有上传，查看修改的内容
+git diff: 修改了文件，但没有上传，查看修改的内容（查看上次提交之后的未暂存文件）
 git log: 查看修改历史(修改的历史记录)
 git log --pretty=oneline: 查看修改历史，返回: commit id + "提交说明"
 git log --pretty=oneline --abbrev-commit: 查看修改历史，返回: commit id (缩写) + "提交说明"
