@@ -262,4 +262,9 @@ git push origin --tags: 一次性推送全部未推送的标签
 step 1: git tag -d v0.9 			------(先删除本地)
 step 2: git push origin :refs/tags/v0.9  	------(删除远程库)
 
+错误解决办法
+git clone url 时返回错误代码 RPC failed; HTTP 504 curl 22 The requested URL returned error: 504 Gateway Time-out
+解决办法:
+git clone --depth=1 url
+
 
