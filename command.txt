@@ -10,6 +10,12 @@ step 1: Fork					------(Fork项目到自己的Github中)
 step 2: clone 					------(从自己的账号下clone，这样才能传送修改)
 Remark: 若希望他人接受你的修改，则需发起pull request。
 
+更新.gitignore
+git rm -r --cached .
+git add .
+git commit -m 'update .gitignore'
+git push -u origin master
+
 
 常用命令:
 git config --list: 列举所有的别名与配置
